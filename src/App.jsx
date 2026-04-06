@@ -1,4 +1,5 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import HomePage from './HomePage'
 import WyckoffBook from './books/WyckoffBook'
 import OrderFlowBook from './books/OrderFlowBook'
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/reversals" element={<ReversalsBook />} />
         <Route path="/imbalances" element={<ImbalancesBook />} />
       </Routes>
+      <Analytics />
     </HashRouter>
   )
 }
